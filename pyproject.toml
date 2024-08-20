@@ -9,26 +9,22 @@ description = "A Tutor plugin to manage our opinionated Open edX operations"
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "AGPLv3" }
-authors = [
-    { name = "eduNEXT" }
-]
+authors = [{ name = "eduNEXT" }]
 classifiers = [
-    "Development Status :: 3 - Alpha",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: GNU Affero General Public License v3",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: GNU Affero General Public License v3",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
 ]
-dependencies = [
-    "tutor>=18.0.0,<19.0.0"
-]
+dependencies = ["tutor>=18.0.0,<19.0.0"]
 
-optional-dependencies = { dev = ["python-semantic-release", "pylint", "black"]}
+optional-dependencies = { dev = ["python-semantic-release", "pylint", "black"] }
 
 [project.urls]
 Homepage = "https://github.com/edunext/tutor-contrib-celery"
@@ -43,16 +39,14 @@ exclude = ["tests*"]
 celery = "tutorcelery.plugin"
 
 [tool.setuptools.dynamic]
-version = {attr = "tutorcelery.__about__.__version__"}
+version = { attr = "tutorcelery.__about__.__version__" }
 
 [tool.wheel]
 universal = true
 
 [tool.semantic_release]
 commit_message = "chore(release): preparing {version}"
-version_variables = [
-    "tutorcelery/__about__.py:__version__",
-]
+version_variables = ["tutorcelery/__about__.py:__version__"]
 
 [tool.semantic_release.branches.main]
 match = "(main|master)"
